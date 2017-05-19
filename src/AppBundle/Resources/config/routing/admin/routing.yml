@@ -1,0 +1,25 @@
+# Admin Routes File
+admin_homepage:
+    path:     /admin/dashboard
+    defaults: { _controller: AppBundle:Admin/Index:index }
+
+# Countries | Države
+admin_countries:
+    path:     /admin/countries
+    defaults: { _controller: AppBundle:Admin/Country:index }
+
+admin_countries_create:
+    path:     /admin/countries/create
+    defaults: { _controller: AppBundle:Admin/Country:create }
+
+admin_countries_edit:
+    path:     /admin/countries/edit/{id}/
+    defaults: { _controller: AppBundle:Admin/Country:edit }
+    requirements:
+        id: '\d+'
+
+admin_countries_delete:
+    path:     /admin/countries/delete/{id}/
+    defaults: { _controller: AppBundle:Admin/Country:delete }
+    requirements:
+        id: '\d+'

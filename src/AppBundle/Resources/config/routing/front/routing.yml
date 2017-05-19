@@ -1,0 +1,7 @@
+# Front Routes File
+front_homepage:
+    path:     /index
+    defaults: { _controller: AppBundle:Front/Index:index }
+    
+
+
